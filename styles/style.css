@@ -1,0 +1,863 @@
+@font-face {
+    font-family: "TestFont";
+    src: url(../assets/fonts/teroxia-demo/TeroxiaDemo-PersonalUse.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f3f3f3;
+    overflow-x: hidden;
+}
+
+.anime {
+    opacity: 0.3;
+}
+
+.glitch {
+    position: relative;
+    animation: glitch-skew 1s infinite linear alternate-reverse 2s;
+}
+
+.glitch:before,
+.glitch:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.glitch:before {
+    left: 2px;
+    /* text-shadow: -2px 0 #ff00c1; */
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 5s infinite linear alternate-reverse 2s;
+}
+
+.glitch:after {
+    left: -2px;
+    /* text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1; */
+    animation: glitch-anim2 1s infinite linear alternate-reverse 2s;
+}
+
+@keyframes glitch-anim {
+    0% {
+        text-shadow: -2px 0 #ff00c1;
+        clip: rect(34px, 9999px, 76px, 0);
+        transform: skew(0.89deg);
+    }
+    5% {
+        clip: rect(56px, 9999px, 12px, 0);
+        transform: skew(0.77deg);
+    }
+    10% {
+        clip: rect(90px, 9999px, 31px, 0);
+        transform: skew(0.58deg);
+    }
+    15% {
+        clip: rect(65px, 9999px, 78px, 0);
+        transform: skew(0.31deg);
+    }
+    20% {
+        clip: rect(77px, 9999px, 44px, 0);
+        transform: skew(0.43deg);
+    }
+    25% {
+        clip: rect(48px, 9999px, 88px, 0);
+        transform: skew(0.16deg);
+    }
+    30% {
+        clip: rect(70px, 9999px, 17px, 0);
+        transform: skew(0.29deg);
+    }
+    35% {
+        clip: rect(52px, 9999px, 97px, 0);
+        transform: skew(0.15deg);
+    }
+    40% {
+        clip: rect(84px, 9999px, 39px, 0);
+        transform: skew(0.91deg);
+    }
+    45% {
+        clip: rect(13px, 9999px, 25px, 0);
+        transform: skew(0.68deg);
+    }
+    50% {
+        clip: rect(19px, 9999px, 62px, 0);
+        transform: skew(0.89deg);
+    }
+    55% {
+        clip: rect(44px, 9999px, 82px, 0);
+        transform: skew(0.14deg);
+    }
+    60% {
+        clip: rect(91px, 9999px, 31px, 0);
+        transform: skew(0.47deg);
+    }
+    65% {
+        clip: rect(76px, 9999px, 95px, 0);
+        transform: skew(0.88deg);
+    }
+    70% {
+        clip: rect(22px, 9999px, 58px, 0);
+        transform: skew(0.12deg);
+    }
+    75% {
+        clip: rect(66px, 9999px, 12px, 0);
+        transform: skew(0.43deg);
+    }
+    80% {
+        clip: rect(58px, 9999px, 70px, 0);
+        transform: skew(0.97deg);
+    }
+    85% {
+        clip: rect(32px, 9999px, 48px, 0);
+        transform: skew(0.55deg);
+    }
+    90% {
+        clip: rect(47px, 9999px, 29px, 0);
+        transform: skew(0.36deg);
+    }
+    95% {
+        clip: rect(81px, 9999px, 90px, 0);
+        transform: skew(0.26deg);
+    }
+    100% {
+        text-shadow: -2px 0 #ff00c1;
+        clip: rect(20px, 9999px, 77px, 0);
+        transform: skew(0.49deg);
+    }
+}
+
+@keyframes glitch-anim2 {
+    0% {
+        text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+        clip: rect(15px, 9999px, 62px, 0);
+        transform: skew(0.81deg);
+    }
+    5% {
+        clip: rect(67px, 9999px, 39px, 0);
+        transform: skew(0.24deg);
+    }
+    10% {
+        clip: rect(83px, 9999px, 19px, 0);
+        transform: skew(0.57deg);
+    }
+    15% {
+        clip: rect(36px, 9999px, 78px, 0);
+        transform: skew(0.71deg);
+    }
+    20% {
+        clip: rect(91px, 9999px, 14px, 0);
+        transform: skew(0.95deg);
+    }
+    25% {
+        clip: rect(26px, 9999px, 58px, 0);
+        transform: skew(0.27deg);
+    }
+    30% {
+        clip: rect(79px, 9999px, 10px, 0);
+        transform: skew(0.83deg);
+    }
+    35% {
+        clip: rect(43px, 9999px, 84px, 0);
+        transform: skew(0.15deg);
+    }
+    40% {
+        clip: rect(88px, 9999px, 33px, 0);
+        transform: skew(0.46deg);
+    }
+    45% {
+        clip: rect(12px, 9999px, 96px, 0);
+        transform: skew(0.29deg);
+    }
+    50% {
+        clip: rect(54px, 9999px, 27px, 0);
+        transform: skew(0.78deg);
+    }
+    55% {
+        clip: rect(80px, 9999px, 41px, 0);
+        transform: skew(0.53deg);
+    }
+    60% {
+        clip: rect(45px, 9999px, 68px, 0);
+        transform: skew(0.91deg);
+    }
+    65% {
+        clip: rect(20px, 9999px, 79px, 0);
+        transform: skew(0.38deg);
+    }
+    70% {
+        clip: rect(59px, 9999px, 21px, 0);
+        transform: skew(0.74deg);
+    }
+    75% {
+        clip: rect(95px, 9999px, 57px, 0);
+        transform: skew(0.61deg);
+    }
+    80% {
+        clip: rect(28px, 9999px, 44px, 0);
+        transform: skew(0.87deg);
+    }
+    85% {
+        clip: rect(67px, 9999px, 31px, 0);
+        transform: skew(0.19deg);
+    }
+    90% {
+        clip: rect(14px, 9999px, 75px, 0);
+        transform: skew(0.48deg);
+    }
+    95% {
+        clip: rect(39px, 9999px, 83px, 0);
+        transform: skew(0.66deg);
+    }
+    100% {
+        text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+        clip: rect(73px, 9999px, 11px, 0);
+        transform: skew(0.52deg);
+    }
+}
+
+@keyframes glitch-skew {
+    0% {
+        transform: skew(-2deg);
+    }
+    10% {
+        transform: skew(3deg);
+    }
+    20% {
+        transform: skew(-4deg);
+    }
+    30% {
+        transform: skew(1deg);
+    }
+    40% {
+        transform: skew(-1deg);
+    }
+    50% {
+        transform: skew(5deg);
+    }
+    60% {
+        transform: skew(-3deg);
+    }
+    70% {
+        transform: skew(2deg);
+    }
+    80% {
+        transform: skew(-5deg);
+    }
+    90% {
+        transform: skew(4deg);
+    }
+    100% {
+        transform: skew(0deg);
+    }
+}
+
+.hero {
+    min-height: 100svh;
+    display: flex;
+    place-items: center;
+    position: relative;
+    perspective: 2000px;
+
+    .hero__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        z-index: 2;
+        pointer-events: none;
+
+        .hero__text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 100%;
+            padding-top: 10rem;
+            padding-bottom: 5rem;
+            font-family: "TestFont";
+
+            .hero__title {
+                font-size: 5rem;
+                letter-spacing: 3px;
+                text-wrap: nowrap;
+            }
+
+            .hero__sub-title {
+                font-size: 2.5rem;
+                letter-spacing: 3px;
+                text-align: center;
+                margin: auto 0 0;
+                color: white;
+            }
+        }
+        .hero__images {
+            width: 100%;
+            aspect-ratio: 4/5;
+            grid-column: 2/2;
+            grid-row: 1/1;
+            background-size: contain;
+            position: relative;
+            box-shadow: -2px 0 0 1px #00fff9, 2px 2px 0 1px #ff00c1;
+            pointer-events: all;
+        }
+
+        .hero__image {
+            position: absolute;
+            height: 100%;
+            aspect-ratio: 4/5;
+            transition: all 2s linear;
+        }
+
+        .hero__image:nth-of-type(2) {
+            clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+        }
+
+        .hero__image:nth-of-type(1):hover ~ .hero__image:nth-of-type(2) {
+            clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        }
+
+        .hero__image:nth-of-type(2):hover {
+            clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+        }
+    }
+
+    .hero__tile-container {
+        position: absolute;
+        top: 0;
+        z-index: 0;
+        width: 100%;
+        max-height: 100vh;
+        overflow: hidden;
+        display: grid;
+        gap: 0.25rem;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        filter: blur(5px);
+
+        .tile {
+            width: 100%;
+            aspect-ratio: 1;
+            transition: background-color 1500ms;
+        }
+
+        .tile:nth-child(4n) {
+            background-color: #e3e3e3;
+        }
+
+        .tile:nth-child(4n + 1) {
+            background-color: #d1d1d1;
+        }
+
+        .tile:nth-child(4n + 2) {
+            background-color: #c0c0c0;
+        }
+
+        .tile:nth-child(4n + 3) {
+            background-color: #a0a0a0;
+        }
+
+        .tile:nth-child(7n) {
+            background-color: #d1d1d1;
+        }
+
+        .tile:nth-child(7n + 3) {
+            background-color: #c0c0c0;
+        }
+
+        .tile:nth-child(7n + 5) {
+            background-color: #a0a0a0;
+        }
+
+        .tile:nth-child(7n + 6) {
+            background-color: #e3e3e3;
+        }
+
+        .tile:nth-child(11n + 1) {
+            background-color: #e3e3e3;
+        }
+
+        .tile:nth-child(11n + 4) {
+            background-color: #d1d1d1;
+        }
+
+        .tile:nth-child(11n + 7) {
+            background-color: #c0c0c0;
+        }
+
+        .tile:nth-child(11n + 10) {
+            background-color: #a0a0a0;
+        }
+
+        .tile:hover {
+            transition-duration: 0ms;
+        }
+
+        .tile:nth-child(1n):hover {
+            background-color: #ff00c1;
+        }
+        .tile:nth-child(2n):hover {
+            background-color: #00fff9;
+        }
+
+        .tile:nth-child(4n):hover {
+            background-color: #00fff9;
+        }
+
+        .tile:nth-child(7n):hover {
+            background-color: #ff00c1;
+        }
+
+        .tile:nth-child(11n + 1):hover {
+            background-color: #ff00c1;
+        }
+
+        .tile:nth-child(11n + 10):hover {
+            background-color: #00fff9;
+        }
+    }
+
+    .hero__dark-section {
+        background-color: #050505;
+        height: 75%;
+        width: 100%;
+        clip-path: polygon(
+            0% 47.781%,
+            3.549% 48.541%,
+            3.549% 48.541%,
+            4.525% 48.677%,
+            5.498% 48.667%,
+            6.464% 48.513%,
+            7.417% 48.218%,
+            8.354% 47.785%,
+            9.27% 47.214%,
+            10.162% 46.51%,
+            11.024% 45.674%,
+            11.853% 44.709%,
+            12.644% 43.616%,
+            12.644% 43.616%,
+            13.374% 42.601%,
+            14.136% 41.695%,
+            14.929% 40.899%,
+            15.747% 40.214%,
+            16.589% 39.644%,
+            17.449% 39.19%,
+            18.326% 38.854%,
+            19.216% 38.639%,
+            20.115% 38.545%,
+            21.02% 38.576%,
+            39.373% 40.471%,
+            39.373% 40.471%,
+            41.459% 40.581%,
+            43.539% 40.48%,
+            45.609% 40.17%,
+            47.664% 39.654%,
+            49.701% 38.932%,
+            51.715% 38.007%,
+            53.701% 36.88%,
+            55.655% 35.553%,
+            57.574% 34.028%,
+            59.452% 32.307%,
+            74.345% 17.715%,
+            74.345% 17.715%,
+            75.517% 16.589%,
+            76.7% 15.501%,
+            77.892% 14.452%,
+            79.092% 13.44%,
+            80.302% 12.467%,
+            81.52% 11.533%,
+            82.746% 10.637%,
+            83.98% 9.781%,
+            85.221% 8.963%,
+            86.47% 8.186%,
+            100% 0%,
+            100% 100%,
+            0% 100%,
+            0% 47.781%
+        );
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        z-index: 1;
+    }
+}
+
+.header {
+    background-color: #050505;
+    padding-block: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    .header__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+
+        .header__logo {
+            font-size: 2rem;
+            letter-spacing: 3px;
+            font-family: "TestFont";
+        }
+
+        .header__navigation {
+            font-family: "TestFont";
+            letter-spacing: 3px;
+            .header__nav-list {
+                display: flex;
+                list-style: none;
+
+                .header__list-item {
+                    position: relative;
+                    font-size: 1rem;
+                    padding: 0.5rem 2rem;
+                    font-weight: 700;
+                    cursor: pointer;
+                    text-transform: uppercase;
+                }
+
+                .header__list-item::after {
+                    content: "";
+                    display: block;
+                    margin-top: 2px;
+                    height: 3px;
+                    width: 0%;
+                    background-color: #ff00c1;
+                    transition: all 0.3s linear;
+                }
+
+                .header__list-item:hover.header__list-item::after {
+                    width: 100%;
+                }
+            }
+        }
+
+        .header__button {
+            padding: 0.5rem 2rem;
+            border-radius: 0.5rem;
+            border: 1px solid #050505;
+            background-color: #050505;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #f3f3f3;
+            box-shadow: -2px 0 0 1px #00fff9, 2px 2px 0 1px #ff00c1;
+            transition: all 0.3 ease-in-out;
+            cursor: pointer;
+        }
+
+        .header__button:hover {
+            color: #d9d9d9;
+            scale: 1.05;
+        }
+    }
+}
+
+.main {
+    position: relative;
+    padding-top: 10rem;
+    .main__dark-top {
+        z-index: -5;
+        position: absolute;
+        top: 0;
+        background-color: #050505;
+        width: 100%;
+        height: 500px;
+        clip-path: polygon(
+            0% 0%,
+            100% 0%,
+            100% 53.901%,
+            100% 53.901%,
+            100% 53.901%,
+            99.157% 59.56%,
+            98.139% 64.872%,
+            96.956% 69.807%,
+            95.622% 74.335%,
+            94.147% 78.425%,
+            92.545% 82.049%,
+            90.827% 85.175%,
+            89.004% 87.773%,
+            87.09% 89.814%,
+            85.096% 91.268%,
+            69.883% 99.882%,
+            68.596% 99.882%,
+            68.596% 99.882%,
+            65.315% 99.464%,
+            62.079% 98.226%,
+            58.905% 96.186%,
+            55.807% 93.367%,
+            52.803% 89.789%,
+            49.906% 85.473%,
+            47.132% 80.438%,
+            44.497% 74.707%,
+            42.017% 68.299%,
+            39.706% 61.235%,
+            37.5% 53.901%,
+            32.995% 46.708%,
+            32.995% 46.708%,
+            31.48% 44.64%,
+            29.917% 43.173%,
+            28.323% 42.299%,
+            26.717% 42.014%,
+            25.116% 42.31%,
+            23.538% 43.18%,
+            22.001% 44.619%,
+            20.522% 46.619%,
+            19.12% 49.174%,
+            17.812% 52.278%,
+            15.38% 58.822%,
+            15.38% 58.822%,
+            13.929% 62.101%,
+            12.362% 64.511%,
+            10.716% 66.064%,
+            9.027% 66.771%,
+            7.331% 66.644%,
+            5.663% 65.694%,
+            4.06% 63.933%,
+            2.558% 61.373%,
+            1.192% 58.025%,
+            0% 53.901%,
+            0% 53.901%,
+            0% 0%
+        );
+    }
+
+    .main__dark-bottom {
+        z-index: -5;
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        background-color: #050505;
+        width: 100%;
+        height: 500px;
+        clip-path: polygon(
+            0% 60.487%,
+            26.359% 63.617%,
+            26.359% 63.617%,
+            27.019% 63.683%,
+            27.681% 63.726%,
+            28.342% 63.744%,
+            29.003% 63.738%,
+            29.664% 63.709%,
+            30.324% 63.655%,
+            30.985% 63.577%,
+            31.644% 63.475%,
+            32.303% 63.35%,
+            32.961% 63.2%,
+            45.481% 60.12%,
+            45.481% 60.12%,
+            48.099% 59.233%,
+            50.655% 57.885%,
+            53.136% 56.091%,
+            55.531% 53.866%,
+            57.828% 51.224%,
+            60.014% 48.182%,
+            62.078% 44.753%,
+            64.008% 40.954%,
+            65.792% 36.8%,
+            67.418% 32.305%,
+            67.418% 32.305%,
+            67.418% 32.305%,
+            68.895% 28.192%,
+            70.504% 24.359%,
+            72.239% 20.818%,
+            74.089% 17.58%,
+            76.045% 14.658%,
+            78.1% 12.064%,
+            80.243% 9.811%,
+            82.467% 7.911%,
+            84.761% 6.375%,
+            87.118% 5.217%,
+            100% 0%,
+            100% 100%,
+            0% 100%,
+            0% 60.487%
+        );
+    }
+}
+
+.article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 5rem auto;
+
+    .article__text-container {
+        padding: 2rem;
+        background-color: #f3f3f3;
+        box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        .article__text__title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .article__text__section {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 150%;
+        }
+    }
+
+    .article__image-container {
+        height: 100%;
+        width: 100%;
+        box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+
+        .article__image {
+            height: 100%;
+            width: 100%;
+            transition: scale 0.2s;
+        }
+        .article__image:hover {
+            scale: 1.1;
+        }
+    }
+}
+
+.gallery {
+    padding-top: 10rem;
+    .gallery__container {
+        margin: 0 auto;
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(8, 0.25fr);
+        gap: 5rem;
+        position: relative;
+
+        .gallery__images {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.5);
+            transition: scale 0.2s;
+        }
+
+        .gallery__images:hover {
+            scale: 1.2;
+        }
+
+        .gallery__images:nth-child(1) {
+            grid-column: 1;
+            grid-row: 2 / span 3;
+        }
+        .gallery__images:nth-child(2) {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            grid-column: 2;
+            grid-row: 1 / span 2;
+        }
+        .gallery__images:nth-child(3) {
+            grid-column: 3;
+            grid-row: 2 / span 3;
+        }
+        .gallery__images:nth-child(4) {
+            grid-column: 1;
+            grid-row: 5 / span 3;
+        }
+        .gallery__images:nth-child(5) {
+            grid-column: 2;
+            grid-row: 3 / span 3;
+        }
+        .gallery__images:nth-child(6) {
+            grid-column: 3;
+            grid-row: 5 / span 3;
+        }
+        .gallery__images:nth-child(7) {
+            z-index: 1;
+            grid-column: 2;
+            grid-row: 6 / span 3;
+        }
+    }
+    .triangle {
+        display: block;
+        content: "";
+        height: 40%;
+        width: 50%;
+        filter: drop-shadow(-2px 0 0 #00fff9) drop-shadow(2px 2px 0 #ff00c1);
+        /* box-shadow: -2px 0 0 1px #00fff9, 2px 2px 0 1px #ff00c1; */
+        position: absolute;
+        top: auto;
+        bottom: -3%;
+        left: 50%;
+        transform: translate(-50%, 75%);
+    }
+
+    .triangle::after {
+        display: block;
+        content: "";
+        background-color: #d9d9d9;
+        clip-path: polygon(0 0, 50% 100%, 100% 0);
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.footer {
+    background-color: #050505;
+    color: white;
+    padding-top: 15rem;
+    padding-bottom: 5rem;
+
+    .footer__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer__information {
+        max-width: 32ch;
+        font-size: 1rem;
+        line-height: 40px;
+        letter-spacing: 6px;
+        margin: 0 auto;
+    }
+
+    .footer__logo {
+        position: relative;
+
+        .footer__logo-image {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            z-index: 2;
+        }
+
+        .footer__logo-text {
+            font-family: "TestFont";
+            text-align: center;
+            h2 {
+                letter-spacing: 3px;
+                line-height: 40px;
+            }
+
+            h3 {
+                font-size: 0.8rem;
+                margin: 0 auto;
+                max-width: 32ch;
+                letter-spacing: 3px;
+                line-height: 20px;
+            }
+        }
+    }
+}
