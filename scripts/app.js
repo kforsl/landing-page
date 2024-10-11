@@ -7,10 +7,8 @@ function addTiles() {
         parentElement.appendChild(newTile);
     }
 }
-
+addTiles();
 window.addEventListener("load", (event) => {
-    addTiles();
-
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {

@@ -49,7 +49,7 @@ function slideInTop(element) {
         opacity: [0, 1],
         translateY: ["-100%", 0],
         duration: 2000,
-
+        blur: ["100px", 0],
         easing: "cubicBezier(.40,.55,.80,1.10)",
     });
 }
@@ -59,7 +59,7 @@ function slideOutTop(element) {
         opacity: [1, 0],
         translateY: [0, "-100%"],
         duration: 1000,
-
+        blur: [0, "100px"],
         easing: "linear",
     });
 }
@@ -70,7 +70,7 @@ function slideInLeft(element) {
         opacity: [0, 1],
         translateX: ["-100%", 0],
         duration: 2000,
-
+        blur: ["100px", 0],
         easing: "cubicBezier(.40,.55,.80,1.10)",
     });
 }
@@ -80,7 +80,7 @@ function slideOutLeft(element) {
         opacity: 0,
         translateX: [0, "-100%"],
         duration: 1000,
-
+        blur: [0, "100px"],
         easing: "linear",
     });
 }
@@ -90,8 +90,8 @@ function slideInBottom(element) {
         targets: element,
         opacity: [0, 1],
         translateY: ["100%", 0],
+        blur: ["100px", 0],
         duration: 2000,
-
         easing: "cubicBezier(.40,.55,.80,1.10)",
     });
 }
@@ -100,8 +100,8 @@ function slideOutBottom(element) {
         targets: element,
         opacity: [1, 0],
         translateY: [0, "100%"],
+        blur: [0, "100px"],
         duration: 1000,
-
         easing: "linear",
     });
 }
@@ -111,8 +111,8 @@ function slideInRight(element) {
         targets: element,
         opacity: [0, 1],
         translateX: ["100%", 0],
+        blur: ["100px", 0],
         duration: 2000,
-
         easing: "cubicBezier(.40,.55,.80,1.10)",
     });
 }
@@ -121,8 +121,8 @@ function slideOutRight(element) {
         targets: element,
         opacity: 0,
         translateX: [0, "100%"],
+        blur: [0, "100px"],
         duration: 1000,
-
         easing: "linear",
     });
 }
@@ -132,8 +132,8 @@ function scaleUp(element) {
         targets: element,
         opacity: [0, 1],
         scale: [0, 1],
+        blur: ["100px", 0],
         duration: 2000,
-
         easing: "cubicBezier(.40,.55,.80,1.10)",
     });
 }
@@ -142,8 +142,8 @@ function scaleDown(element) {
         targets: element,
         opacity: 0,
         scale: [1, 0],
+        blur: [0, "100px"],
         duration: 1000,
-
         easing: "easeInBack",
     });
 }
